@@ -1,6 +1,6 @@
 {
   "name": "@ta-kiyama/imgen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "immutable generator generator for node.js",
   "main": "dist/main.js",
   "scripts": {
