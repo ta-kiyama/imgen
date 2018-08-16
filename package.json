@@ -1,0 +1,29 @@
+{
+  "name": "@ta-kiyama/imgen",
+  "version": "1.0.0",
+  "description": "immutable generator generator for node.js",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "webpack --mode development --output-library-target commonjs2 --module-bind js=babel-loader",
+    "build": "webpack --mode production --output-library-target commonjs2 --module-bind js=babel-loader",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ta-kiyama/imgen.git"
+  },
+  "keywords": [],
+  "author": "ta-kiyama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ta-kiyama/imgen/issues"
+  },
+  "homepage": "https://github.com/ta-kiyama/imgen#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}
