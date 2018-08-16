@@ -54,24 +54,31 @@ const itr = imgen(async function* (arg) {
   yield 3;
 });
 
-await itr.next(1); // { value: 1, done: false }
+await itr
+  .next(1)
+  .toPromise(); // { value: 1, done: false }
 
 await itr.next(1); // { value: 1, done: false }
 
 await itr
   .next(1)
-  .next(2); // { value: 4, done: false } ※after 1sec
-
-itr
-  .next(1)
   .next(2)
-  .next(); // { value: 3, done: false } ※after 1sec
+  .toPromise(); // { value: 4, done: false } ※after 1sec
 
 itr
   .next(1)
   .next(2)
   .next()
-  .next(); // { value: undefined, done: true } ※after 1sec
+  .toPromise(); // { value: 3, done: false } ※after 1sec
 
-itr.next(1); // { value: 1, done: false }
+itr
+  .next(1)
+  .next(2)
+  .next()
+  .next()
+  .toPromise(); // { value: undefined, done: true } ※after 1sec
+
+itr
+  .next(1)
+  .toPromise(); // { value: 1, done: false }
 ```
