@@ -5,7 +5,7 @@ immutable generator generator for node.js
 
 # install
 
-`npm install -D @ta-kiyama/imgen`
+`npm install @ta-kiyama/imgen`
 
 # sample
 
