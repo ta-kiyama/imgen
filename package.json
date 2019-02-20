@@ -1,11 +1,11 @@
 {
   "name": "@ta-kiyama/imgen",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "immutable generator generator for node.js",
   "main": "dist/main.js",
   "scripts": {
     "dev": "webpack --mode development --output-library-target commonjs2 --module-bind js=babel-loader",
-    "build": "webpack --mode production --output-library-target commonjs2 --module-bind js=babel-loader",
+    "build": "webpack --mode production --output-library-target commonjs2 --devtool source-map --module-bind js=babel-loader",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
